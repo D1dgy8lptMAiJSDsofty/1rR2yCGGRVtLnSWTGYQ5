@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HudMods</title>
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover minimal-ui standalone">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.ico"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+  </head>
+  <br>
+  <br>
+  <center>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search">
+    <ul id="myUL">
+      <li>
+        <a href="">
+          <div class="apps">
+            <img src="https://icons.kasar.store/Pubg.png">
+            <h1>Pubg Mobile</h1>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="apps">
+            <img src="Img/Standoff2.png">
+            <h1>Standoff2</h1>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="apps">
+            <img src="Img/Cops.png">
+            <h1>Critical Ops</h1>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="apps">
+            <img src="Img/AmongUs.png">
+            <h1>Among Us</h1>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="apps">
+            <img src="https://icons.kasar.store/Minecraft.png">
+            <h1>Minecraft</h1>
+          </div>
+        </a>
+      </li>
+  </center>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="nav">
+    <a href="Sections.html" class="tab">rectangle_stack_fill</a>
+    <a href="index.html" class="tab">house_fill</a>
+    <a href="Search.html" class="tab">search_fill</a>
+  </div>
+  <script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, div, h1, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    h1 = li[i].getElementsByTagName("h1")[0];
+    txtValue = h1.textContent || h1.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+  </script>
+</html>
